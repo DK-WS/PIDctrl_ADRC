@@ -218,7 +218,7 @@ class EulerController:
         # z_des_now = 10
         r=3
         position_des_now = np.array([x_des_now, y_des_now, z_des_now])
-        position_des_now = (r * math.cos(2 * math.pi/20 * (t))-r, r * math.sin(2 * math.pi / 20*(t)),10)
+        position_des_now = (r * math.cos(2 * math.pi/20 * (t))-r, r * math.sin(2 * math.pi / 20*(t)),5)
         return position_des_now
 
     def jisuan_error(self,measurement,des_position):
