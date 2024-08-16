@@ -137,9 +137,9 @@ class EulerController:
         ADRC2=-tools.ADRC2(v_h_des_now[1],v_h_now[1])
         # attitude_h_des = np.dot(np.linalg.inv(A_psi),pid_out) / QPara.g
 
-        AAA= np.array([ADRC1, ADRC2 ])
+        ADRC_OUT= np.array([ADRC1, ADRC2 ])
 
-        attitude_h_des = np.dot(np.linalg.inv(A_psi), AAA) / QPara.g
+        attitude_h_des = np.dot(np.linalg.inv(A_psi), ADRC_OUT) / QPara.g
         attitude_h_des = tools.sat_gd(attitude_h_des, 0.15, 1).flatten()
         # 计算得到的水平姿态0 1 和期望的偏航角组成一个数组
         attitude_des_now = np.array([attitude_h_des[0], attitude_h_des[1], ctrl_para.psi_des])
