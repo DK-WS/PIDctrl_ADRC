@@ -213,7 +213,7 @@ class EulerController:
         r=3
         x_des_now = r * math.cos(2 * math.pi/20 * (t))-r
         y_des_now = r * math.sin(2 * math.pi / 20*(t))
-        z_des_now = 10
+        z_des_now = 3
         # x_des_now = t
         # y_des_now = t
         # z_des_now = 10
